@@ -1,4 +1,4 @@
-name: MSIXAppPackageUpdate
+name: PublishAppPackagesToStore
 on:   
       workflow_dispatch:
 jobs:
