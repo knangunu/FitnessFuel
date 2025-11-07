@@ -8,7 +8,7 @@
       "EH": "NotAvailable"
     },
     "PriceId": "Free",
-    "IsAdvancedPricingModel": false
+    "IsAdvancedPricingModel": true
   },
   "Visibility": "Public",
   "TargetPublishMode": "Immediate",
@@ -17,9 +17,9 @@
     "en-us": {
       "BaseListing": {
         "Keywords": [],
-        "Description": "Updated using Github actions",
-        "Features": ["Test Feature1", "Test Feature2"],
-        "ReleaseNotes": "Updated using Github actions",
+        "Description": "From API - auto update",
+        "Features": [],
+        "ReleaseNotes": "",
         "Images": [
           {
             "FileName": "Screenshot1.png",
@@ -61,12 +61,12 @@
         "RecommendedHardware": [],
         "MinimumHardware": [],
         "Title": "FitnessFuel",
-        "LicenseTerms": "Updated using Github actions",
-        "CopyrightAndTrademarkInfo": "Updated using Github actions",
-        "ShortDescription": "Updated using Github actions",
-        "ShortTitle": "Updated using Github actions",
-        "VoiceTitle": "Updated using Github actions",
-        "DevStudio": "Updated using Github actions"
+        "LicenseTerms": "From API",
+        "CopyrightAndTrademarkInfo": "From API",
+        "ShortDescription": "From API",
+        "ShortTitle": "From API",
+        "VoiceTitle": "From API",
+        "DevStudio": "From API"
       },
       "PlatformOverrides": {}
     }
