@@ -29,4 +29,4 @@ jobs:
         New-Item -ItemType Directory -Force -Path "metadata" | Out-Null
 
         # Retrieve submission metadata and save to file
-        msstore submission get 9NDRMZKRHKG3 | Out-File -FilePath "metadata/metadata.json" -Encoding utf8
+        msstore submission get 9NP0T3QQXL70 | Out-File -FilePath "metadata/metadata.json" -Encoding utf8
