@@ -1,4 +1,4 @@
-name: MSIXAppMetadataUpdate
+name: GetBaseMetadata
 
 on:
   workflow_dispatch:
