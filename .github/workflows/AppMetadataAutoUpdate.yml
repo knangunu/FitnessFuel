@@ -24,7 +24,7 @@ jobs:
               --clientSecret ${{ secrets.AZURE_AD_APPLICATION_SECRET }}
 
       - name: Update metadata
-        run: msstore submission updateMetadata '9NP0T3QQXL70' '${{ github.workspace }}/metadata/metadata.json' 
+        #run: msstore submission updateMetadata '9NP0T3QQXL70' '${{ github.workspace }}/metadata/metadata.json' 
       - name: Publish to Store
-        run: msstore submission publish 9NP0T3QQXL70
+        #run: msstore submission publish 9NP0T3QQXL70
               
