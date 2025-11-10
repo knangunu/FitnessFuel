@@ -3,7 +3,7 @@ name: AppPackageAutoUpdate
 on:
   push:
     paths:
-      - 'release/AppNameV2.msix'
+      - 'release/FitnessFuelV2.msix'
 
 jobs:
   build:
@@ -24,5 +24,5 @@ jobs:
               --clientSecret ${{ secrets.AZURE_AD_APPLICATION_SECRET }}
 
       - name: Publish App package
-        run: msstore publish '${{ github.workspace }}/release/AppNameV2.msix' -id "9NP0T3QQXL70"
+        run: msstore publish '${{ github.workspace }}/release/FitnessFuelV2.msix' -id "9NP0T3QQXL70"
     
