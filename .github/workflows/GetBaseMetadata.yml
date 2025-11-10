@@ -1,1 +1,32 @@
-name: GetBaseMetadata
+name: MSIXAppMetadataUpdate
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - uses: microsoft/microsoft-store-apppublisher@v1.1
+
+    - name: Configure MSStore CLI
+      run: |
+        msstore reconfigure `
+          --tenantId ${{ secrets.AZURE_AD_TENANT_ID }} `
+          --sellerId ${{ secrets.SELLER_ID }} `
+          --clientId ${{ secrets.AZURE_AD_APPLICATION_CLIENT_ID }} `
+          --clientSecret ${{ secrets.AZURE_AD_APPLICATION_SECRET }}
+
+    - name: Get base metadata and save to metadata.json
+      shell: pwsh
+      run: |
+        msstore --version
+
+        # Create metadata directory if it doesn’t exist
+        New-Item -ItemType Directory -Force -Path "metadata" | Out-Null
+
+        # Retrieve submission metadata and save to file
+        msstore submission get 9NDRMZKRHKG3 | Out-File -FilePath "metadata/metadata.json" -Encoding utf8
