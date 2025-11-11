@@ -20,13 +20,7 @@ jobs:
           --clientId ${{ secrets.AZURE_AD_APPLICATION_CLIENT_ID }} `
           --clientSecret ${{ secrets.AZURE_AD_APPLICATION_SECRET }}
 
-    - name: Get base metadata and save to metadata.json
+    - name: Get base metadata 
       shell: pwsh
       run: |
-        msstore --version
-
-        # Create metadata directory if it doesn’t exist
-        New-Item -ItemType Directory -Force -Path "metadata" | Out-Null
-
-        # Retrieve submission metadata and save to file
-        msstore submission get 9NP0T3QQXL70 | Out-File -FilePath "metadata/metadata.json" -Encoding utf8
+        msstore submission get 9NP0T3QQXL70
